@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nibedan | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Nibedan Logo">
+      <span class="site-name">Nibedan</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-item">Home</a></li>
+      <li><a href="about.html" class="nav-item">About</a></li>
+      <li><a href="contact.html" class="nav-item">Contact</a></li>
+      <li><a href="profile.html" class="nav-item"><i class="fas fa-user"></i> Profile</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+      <button id="lang-toggle">ने / En</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 id="hero-title">Welcome to Nibedan</h1>
+    <p id="hero-desc">Your one-stop platform for sample letters and recommendation letters.</p>
+  </section>
+
+  <!-- Letters Section -->
+<section class="letters-section">
+  <h2 id="letters-title">Sample Letters</h2>
+
+  <!-- Filter & Search -->
+  <div class="letters-controls">
+    <input type="text" id="search-input" placeholder="Search letters...">
+    <select id="category-filter">
+      <option value="All">All Categories</option>
+      <option value="Education">Education</option>
+      <option value="Job">Job</option>
+      <option value="Government">Government</option>
+    </select>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="cards-container" id="letters-cards"></div>
+</section>
+
+  <script src="main.js"></script>
+</body>
+</html>
