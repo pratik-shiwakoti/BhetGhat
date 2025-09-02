@@ -1,55 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Nibedan | Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BhetGhat - Your Digital Chautari</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Nibedan Logo">
-      <span class="site-name">Nibedan</span>
+    <!-- Navigation Header -->  
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="logo.png" alt="BhetGhat Logo" class="logo" id="logo">
+            </div>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span data-en="Home" data-np="गृह">Home</span>
+                </a>
+                <a href="event.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span data-en="Events" data-np="कार्यक्रम">Events</span>
+                </a>
+                <a href="creative.html" class="nav-link">
+                    <i class="fas fa-palette"></i>
+                    <span data-en="Creative Corner" data-np="रचनात्मक कुना">Creative Corner</span>
+                </a>
+                <a href="community.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span data-en="Community Hub" data-np="समुदायिक केन्द्र">Community Hub</span>
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span data-en="Profile" data-np="प्रोफाइल">Profile</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span data-en="About" data-np="बारेमा">About</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span data-en="Contact" data-np="सम्पर्क">Contact</span>
+                </a>
+                <a href="faq.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span data-en="FAQ" data-np="प्रश्न">FAQ</span>
+                </a>
+            </nav>
+
+            <div class="nav-controls">
+                <button class="control-btn" id="lang-toggle" title="Language Toggle">
+                    <span id="lang-text">EN</span>
+                </button>
+                <button class="control-btn" id="theme-toggle" title="Dark/Light Mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section --> 
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span data-en="Welcome to BhetGhat" data-np="BhetGhat मा स्वागत छ">Welcome to BhetGhat</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span data-en="Your Digital Chautari" data-np="तपाईंको डिजिटल चौतारी">Your Digital Chautari</span>
+                </p>
+                <p class="hero-description">
+                    <span data-en="Connect, share, and grow with your community in our digital meeting space where creativity, learning, and culture come together." data-np="हाम्रो डिजिटल भेटघाट स्थानमा आफ्नो समुदायसँग जोडिनुहोस्, साझा गर्नुहोस्, र बढ्नुहोस् जहाँ रचनात्मकता, सिकाइ, र संस्कृति एकसाथ आउँछन्।">
+                        Connect, share, and grow with your community in our digital meeting space where creativity, learning, and culture come together.
+                    </span>
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">
+                        <span data-en="Join Community" data-np="समुदायमा सामेल हुनुहोस्">Join Community</span>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <span data-en="Explore Events" data-np="कार्यक्रमहरू अन्वेषण गर्नुहोस्">Explore Events</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-palette"></i>
+                        <span>Creative</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section --> 
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search posts, users, events, or creative content..." data-en-placeholder="Search posts, users, events, or creative content..." data-np-placeholder="पोस्ट, प्रयोगकर्ता, कार्यक्रम, वा रचनात्मक सामग्री खोज्नुहोस्...">
+                    <button class="search-btn" id="search-btn">
+                        <span data-en="Search" data-np="खोज्नुहोस्">Search</span>
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <span data-en="All" data-np="सबै">All</span>
+                    </button>
+                    <button class="filter-btn" data-filter="posts">
+                        <span data-en="Posts" data-np="पोस्ट">Posts</span>
+                    </button>
+                    <button class="filter-btn" data-filter="events">
+                        <span data-en="Events" data-np="कार्यक्रम">Events</span>
+                    </button>
+                    <button class="filter-btn" data-filter="creative">
+                        <span data-en="Creative" data-np="रचनात्मक">Creative</span>
+                    </button>
+                    <button class="filter-btn" data-filter="users">
+                        <span data-en="Users" data-np="प्रयोगकर्ता">Users</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Feed/Highlights Section -->
+    <section class="feed-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Community Highlights" data-np="समुदायिक मुख्य कुराहरू">Community Highlights</h2>
+                <p data-en="Discover the latest posts, creative works, and upcoming events from our vibrant community" data-np="हाम्रो जीवन्त समुदायबाट नवीनतम पोस्ट, रचनात्मक कार्य, र आगामी कार्यक्रमहरू पत्ता लगाउनुहोस्">
+                    Discover the latest posts, creative works, and upcoming events from our vibrant community
+                </p>
+            </div>
+
+            <div class="feed-grid">
+                <!-- Latest Posts  --> 
+                <div class="feed-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-comments"></i>
+                        <span data-en="Latest Discussions" data-np="नवीनतम छलफल">Latest Discussions</span>
+                    </h3>
+                    <div class="feed-cards" id="latest-posts">
+                         Dynamic content will be loaded here 
+                    </div>
+                </div>
+
+                 <!-- Featured Creative Works -->
+                <div class="feed-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-star"></i>
+                        <span data-en="Featured Creative Works" data-np="विशेष रचनात्मक कार्य">Featured Creative Works</span>
+                    </h3>
+                    <div class="feed-cards" id="creative-works">
+                         Dynamic content will be loaded here 
+                    </div>
+                </div>
+
+                 <!-- Upcoming Events --> 
+                <div class="feed-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-calendar-check"></i>
+                        <span data-en="Upcoming Events" data-np="आगामी कार्यक्रम">Upcoming Events</span>
+                    </h3>
+                    <div class="feed-cards" id="upcoming-events">
+                         Dynamic content will be loaded here 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="logo.svg" alt="BhetGhat Logo" class="footer-logo" id="footer-logo">
+                        <p data-en="Your Digital Chautari - Connecting communities through culture, creativity, and conversation." data-np="तपाईंको डिजिटल चौतारी - संस्कृति, रचनात्मकता, र कुराकानी मार्फत समुदायहरू जोड्दै।">
+                            Your Digital Chautari - Connecting communities through culture, creativity, and conversation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-np="द्रुत लिङ्कहरू">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-en="About Us" data-np="हाम्रो बारेमा">About Us</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-np="सम्पर्क">Contact</a></li>
+                        <li><a href="faq.html" data-en="FAQ" data-np="प्रश्न">FAQ</a></li>
+                        <li><a href="terms.html" data-en="Terms & Privacy" data-np="नियम र गोपनीयता">Terms & Privacy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Community" data-np="समुदाय">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="events.html" data-en="Events" data-np="कार्यक्रम">Events</a></li>
+                        <li><a href="creative.html" data-en="Creative Corner" data-np="रचनात्मक कुना">Creative Corner</a></li>
+                        <li><a href="community.html" data-en="Discussions" data-np="छलफल">Discussions</a></li>
+                        <li><a href="feedback.html" data-en="Feedback" data-np="प्रतिक्रिया">Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Connect With Us" data-np="हामीसँग जोडिनुहोस्">Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 BhetGhat. <span data-en="All rights reserved." data-np="सबै अधिकार सुरक्षित।">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4 data-en="BhetGhat Assistant" data-np="BhetGhat सहायक">BhetGhat Assistant</h4>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-content">
+                <div class="chatbot-messages" id="chatbot-messages">
+                    <div class="bot-message">
+                        <span data-en="Hello! How can I help you today?" data-np="नमस्कार! आज म तपाईंलाई कसरी मद्दत गर्न सक्छु?">Hello! How can I help you today?</span>
+                    </div>
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" id="chatbot-input" placeholder="Type your message..." data-en-placeholder="Type your message..." data-np-placeholder="आफ्नो सन्देश टाइप गर्नुहोस्...">
+                    <button id="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-item">Home</a></li>
-      <li><a href="about.html" class="nav-item">About</a></li>
-      <li><a href="contact.html" class="nav-item">Contact</a></li>
-      <li><a href="profile.html" class="nav-item"><i class="fas fa-user"></i> Profile</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-      <button id="lang-toggle">ने / En</button>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 id="hero-title">Welcome to Nibedan</h1>
-    <p id="hero-desc">Your one-stop platform for sample letters and recommendation letters.</p>
-  </section>
-
-  <!-- Letters Section -->
-<section class="letters-section">
-  <h2 id="letters-title">Sample Letters</h2>
-
-  <!-- Filter & Search -->
-  <div class="letters-controls">
-    <input type="text" id="search-input" placeholder="Search letters...">
-    <select id="category-filter">
-      <option value="All">All Categories</option>
-      <option value="Education">Education</option>
-      <option value="Job">Job</option>
-      <option value="Government">Government</option>
-    </select>
-  </div>
-
-  <!-- Cards Container -->
-  <div class="cards-container" id="letters-cards"></div>
-</section>
-
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
